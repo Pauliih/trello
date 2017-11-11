@@ -5,23 +5,27 @@
 */
 
 function add(){
-
-	var newList = document.getElementById('createList');
-	newList = "";
+	//Hacer invisible el contenedor con el texto
+	containerTarea = document.getElementById("containerTask");
+	containerTarea.classList.add("invisible");
+	
 	var contTask = document.getElementById('containerTask');
     var tasks = document.getElementById('tasks');
 
+	var salto= document.createElement('br');
 	var newForm = document.createElement('form');
 	var task = document.createElement('input');
+	task.setAttribute('placeholder','Añadir una lista...')
     task.classList.add('task');
 
 	var btnTask = document.createElement('button');
     var textBoton = document.createTextNode("Guardar");
     btnTask.setAttribute("type", "button");
-    btnTask.classList.add("btnGuardar");
+    btnTask.classList.add("btnSave");
 
 	btnTask.appendChild(textBoton);
 	newForm.appendChild(task);
+	newForm.appendChild(salto);
 	newForm.appendChild(btnTask);
 	tasks.appendChild(newForm);
 }
