@@ -52,6 +52,7 @@ button{
 
 #containerTasks{
 	padding: 40px; 
+	margin: 0;
 }
 
 #containerTask{
@@ -87,5 +88,24 @@ a{
 	font-size: 12px;
 	padding-top: 3px;
 	padding-bottom: 3px;
+}
 
+nav ul{
+ 	margin: 0;
+ 	line-height: 40px;
+ 	overflow: auto;	
+  	color: #fff;
+    list-style: none;
+
+}
+nav ul li{
+
+  display: inline-block;
+  text-align: center;
+}
+nav ul li i{
+  margin-left: 40px;
+}
+nav ul li h4{
+  margin-left: 10px;
 }
