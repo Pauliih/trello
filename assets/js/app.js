@@ -83,8 +83,10 @@ function add(){
 
 		addNewCard.addEventListener('click', function(){
 
+			/*
 			var link = document.getElementById('link');
 			link.setAttribute('style','display:none');//Para que el a no se muestre
+			*/
 
 			var formCard = document.createElement('form');
 		   	var txtArea = document.createElement('textarea');
@@ -105,6 +107,8 @@ function add(){
 			listBox.appendChild(formCard);
 
 			txtArea.focus(); // versión 0.0.4 Poner focus al input al dar click en "Agregar una tarjeta".
+			listBox.removeChild(addNewCard); /*al hacer click en el link, lo elimino y hago que 
+											me aparezca un nuevo formulario para añadir una tarjeta.*/
 
 			/*__________________________________________________________________
 			version 0.0.4 Al dar click en el botón de "Añadir", deberá aparecer el texto de la tarea 
@@ -132,7 +136,7 @@ function add(){
 				//asigno hijos
 				newCard.appendChild(txtNewCard);
 				pTxt.appendChild(newCard);
-				pTxt.appendChild(txtArea);
+				pTxt.appendChild(txtArea);//version 0.0.5 Mostrar el formulario nuevamente debajo de la última tarea añadida.
 
 				document.getElementById('txtArea').value="";
 				txtareaCard.setAttribute('style','display:block!important'); //oculta el textarea
